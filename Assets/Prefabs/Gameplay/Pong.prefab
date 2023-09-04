@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6983166176137382468}
   - component: {fileID: 1645950304607858621}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Pong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
