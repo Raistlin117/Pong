@@ -2,7 +2,7 @@
 
 namespace Core.UI.StarterPopup
 {
-    public class StarterPopup : UIComponent
+    public class StarterPopup : UIComponent, IStarterPopup
     {
         public event Action StartButtonClicked;
 

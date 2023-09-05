@@ -7,10 +7,10 @@ namespace Core.UI.StarterPopup
 {
     public class StarterPopupHandler : IStartable
     {
-        private readonly StarterPopup _starterPopup;
+        private readonly IStarterPopup _starterPopup;
         private readonly IPublisher<StartButtonClickedMsg> _publisher;
 
-        public StarterPopupHandler(StarterPopup starterPopup, IPublisher<StartButtonClickedMsg> publisher)
+        public StarterPopupHandler(IStarterPopup starterPopup, IPublisher<StartButtonClickedMsg> publisher)
         {
             _starterPopup = starterPopup;
             _publisher = publisher;

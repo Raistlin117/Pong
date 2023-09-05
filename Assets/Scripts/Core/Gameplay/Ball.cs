@@ -7,11 +7,6 @@ namespace Core.Gameplay
     {
         [SerializeField] private Rigidbody2D _rigidbody;
 
-        private void Start()
-        {
-            AddForce(Vector2.up * 300);
-        }
-
         public void AddForce(Vector2 forceDirection)
         {
             Debug.Log(_rigidbody);
