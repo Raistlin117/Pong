@@ -7,6 +7,11 @@ namespace Core.Gameplay
 {
     public class PlayerRocketHandler : ITickable
     {
+        // linear equation formula constants to calculate rocket move limit
+        private const float M = -0.5f;
+        private const float X = 1;
+        private const float Y = 1.75f;
+        
         private readonly IInputDirectionProvider _inputDirectionProvider;
         private readonly IPlayerRocket _playerRocket;
         private readonly PlayerConfigs _playerConfigs;
@@ -32,26 +37,35 @@ namespace Core.Gameplay
 
         private void MoveRight()
         {
-            var rocketPosition = _playerRocket.GetRocketTransform().position;
-
-            float newX = Mathf.Clamp(rocketPosition.x, -3.5f, 3.5f);
-
-            rocketPosition = 
-                new Vector3(newX + _playerConfigs.RocketMoveSpeed * Time.deltaTime,rocketPosition.y, rocketPosition.z);
-            
-            _playerRocket.GetRocketTransform().position = rocketPosition;
+            MoveRocket(1f);
         }
 
         private void MoveLeft()
         {
+            MoveRocket(-1f);
+        }
+
+        private void MoveRocket(float direction)
+        {
             var rocketPosition = _playerRocket.GetRocketTransform().position;
+            float moveLimit = GetRocketMoveLimit();
 
-            float newX = Mathf.Clamp(rocketPosition.x, -3.5f, 3.5f);
-
-            rocketPosition = 
-                new Vector3(newX - _playerConfigs.RocketMoveSpeed * Time.deltaTime,rocketPosition.y, rocketPosition.z);
+            float movedPositionX = rocketPosition.x + direction * _playerConfigs.RocketMoveSpeed * Time.deltaTime;
+            
+            float fixedPositionX = Mathf.Clamp(movedPositionX, -moveLimit, moveLimit);
+            
+            rocketPosition = new Vector3(fixedPositionX, rocketPosition.y, rocketPosition.z);
             
             _playerRocket.GetRocketTransform().position = rocketPosition;
+        }
+
+        private float GetRocketMoveLimit()
+        {
+            var rocketSize = _playerRocket.GetRocketTransform().localScale.x;
+
+            var moveLimit = M * (rocketSize - X) + Y;
+
+            return moveLimit;
         }
     }
 }
