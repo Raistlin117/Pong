@@ -4,6 +4,6 @@ namespace Core.Gameplay
 {
     public interface IBall
     {
-        void AddForce(Vector2 forceDirection);
+        void SetVelocity(Vector2 forceDirection);
     }
 }

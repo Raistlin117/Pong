@@ -19,7 +19,7 @@ namespace Core.Gameplay
 
         private void StartGame(StartButtonClickedMsg msg)
         {
-            _ballHandler.StartImpulse();
+            _ballHandler.StartVelocity();
         }
 
         public void FinishGame()

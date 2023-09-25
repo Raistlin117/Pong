@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Core.Gameplay
 {
@@ -7,10 +6,9 @@ namespace Core.Gameplay
     {
         [SerializeField] private Rigidbody2D _rigidbody;
 
-        public void AddForce(Vector2 forceDirection)
+        public void SetVelocity(Vector2 forceDirection)
         {
-            Debug.Log(_rigidbody);
-            _rigidbody.AddForce(forceDirection, ForceMode2D.Force);
+            _rigidbody.velocity = forceDirection;
         }
     }
 }

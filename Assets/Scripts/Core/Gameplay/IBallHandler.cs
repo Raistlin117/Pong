@@ -1,7 +1,11 @@
-﻿namespace Core.Gameplay
+﻿
+using UnityEngine;
+
+namespace Core.Gameplay
 {
     public interface IBallHandler
     {
-        void StartImpulse();
+        void StartVelocity();
+        void SetVelocity(Vector2 velocityDirection);
     }
 }

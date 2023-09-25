@@ -450,25 +450,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2101965985347001042, guid: d537f765333d3114890157b31b56b845, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2101965985347001042, guid: d537f765333d3114890157b31b56b845, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2101965985347001042, guid: d537f765333d3114890157b31b56b845, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1844240841
-      objectReference: {fileID: 0}
     - target: {fileID: 2931927138967179290, guid: d537f765333d3114890157b31b56b845, type: 3}
       propertyPath: m_Name
       value: Ball
-      objectReference: {fileID: 0}
-    - target: {fileID: 2931927138967179290, guid: d537f765333d3114890157b31b56b845, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1092,7 +1076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402030760839348850, guid: cce22f6dd18df104abaf506260767648, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.547
+      value: -1.08
       objectReference: {fileID: 0}
     - target: {fileID: 5402030760839348850, guid: cce22f6dd18df104abaf506260767648, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1129,14 +1113,6 @@ PrefabInstance:
     - target: {fileID: 6576111265145959230, guid: cce22f6dd18df104abaf506260767648, type: 3}
       propertyPath: m_SortingLayer
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6576111265145959230, guid: cce22f6dd18df104abaf506260767648, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6576111265145959230, guid: cce22f6dd18df104abaf506260767648, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1844240841
       objectReference: {fileID: 0}
     - target: {fileID: 8999309741961219483, guid: cce22f6dd18df104abaf506260767648, type: 3}
       propertyPath: _ballTransform
@@ -1341,10 +1317,6 @@ PrefabInstance:
       value: PlayerRocket
       objectReference: {fileID: 0}
     - target: {fileID: 3150356484085557947, guid: b695888db8d352844b294262ea7ad6b3, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3150356484085557947, guid: b695888db8d352844b294262ea7ad6b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1383,18 +1355,6 @@ PrefabInstance:
     - target: {fileID: 3150356484085557947, guid: b695888db8d352844b294262ea7ad6b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4182863866627922935, guid: b695888db8d352844b294262ea7ad6b3, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4182863866627922935, guid: b695888db8d352844b294262ea7ad6b3, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4182863866627922935, guid: b695888db8d352844b294262ea7ad6b3, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1844240841
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

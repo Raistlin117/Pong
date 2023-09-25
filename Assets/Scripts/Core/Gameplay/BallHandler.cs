@@ -7,23 +7,32 @@ namespace Core.Gameplay
     {
         private readonly GameConfigs _gameConfigs;
         private readonly IBall _ball;
-
+        
         public BallHandler(GameConfigs gameConfigs, IBall ball)
         {
             _gameConfigs = gameConfigs;
             _ball = ball;
         }
         
-        public void StartImpulse()
+        public void StartVelocity()
         {
             var randomDirection = GetRandomDirection();
-            
-            _ball.AddForce(randomDirection * 200);
+
+            SetVelocity(randomDirection * _gameConfigs.BallStartSpeed);
+        }
+        
+
+        public void SetVelocity(Vector2 velocityDirection)
+        {
+            _ball.SetVelocity(velocityDirection);
         }
 
         private Vector2 GetRandomDirection()
         {
-            return Vector2.up;
+            var randomX = Random.Range(-2f, 2f);
+            var randomY = Random.Range(-2f, 2f);
+            
+            return new Vector2(randomX, randomY);
         }
     }
 }

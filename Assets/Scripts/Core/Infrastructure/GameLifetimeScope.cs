@@ -32,15 +32,15 @@ namespace Core.Infrastructure
             builder.RegisterComponent(_ballComponent).As<IBall>();
             builder.RegisterComponent(_playerRocket).As<IPlayerRocket>();
             builder.RegisterComponent(_uiMenuScreen);
-            builder.Register<GameConfigs>(Lifetime.Singleton);
             builder.Register<IBallHandler, BallHandler>(Lifetime.Singleton);
             builder.RegisterEntryPoint<UIMenuScreenHandler>();
             builder.RegisterComponent(_starterPopup).As<IStarterPopup>();
             builder.RegisterEntryPoint<StarterPopupHandler>();
             builder.RegisterEntryPoint<GameLoop>();
-            builder.RegisterEntryPoint<PlayerRocketHandler>();
+            builder.RegisterEntryPoint<PlayerRocketMoveHandler>();
             builder.RegisterComponent(_inputDirectionProvider).As<IInputDirectionProvider>();
-            builder.RegisterInstance(_gameConfigs.PlayerConfigs);
+            builder.RegisterInstance(_gameConfigs);
+            builder.RegisterEntryPoint<PlayerRocketCollisionHandler>();
         }
     }
 }

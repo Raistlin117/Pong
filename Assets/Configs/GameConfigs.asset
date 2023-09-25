@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b4878154804e1a96e684bb5fb64aa3, type: 3}
   m_Name: GameConfigs
   m_EditorClassIdentifier: 
-  _ballStartSpeed: 0
-  _maxRocketSize: 0
-  _boosterRocketDeltaSize: 0
-  _rocketMoveSpeed: 5
+  _ballStartSpeed: 2
+  _rocketMaxSize: 2.6
+  _rocketSpeed: 4
+  _boosterRocketDeltaSize: 0.2
+  _rocketMaxAngle: 2
